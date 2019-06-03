@@ -15,6 +15,11 @@ def main():
     print("")
     print("{0:>10s} |{1:>10s} |{2:>10s} ".format(
         "x", "f1(x)", "Taylor(x)"))
+    print("{0:>11s}|{1:>11s}|{2:>11s}".format(
+        *(3 * (11 * "-", ))))
+    for x_val, f1_val, taylor in zip(x, y, z):
+        print("{0: 10.3f} |{1: 10.7f} |{2: 10.7f} ".format(
+            x_val, f1_val, taylor))
 
 
 if __name__ == "__main__":
