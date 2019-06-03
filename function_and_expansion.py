@@ -37,4 +37,15 @@ def Taylor_f1(x, order=2):
     y : double
         Value of the Taylor series at `x`.
     """
-    raise NotImplementedError("To be written")
+    if order == 0:
+        return 0
+    elif order == 1:
+        return x
+    elif order == 2:
+        return x
+    elif order == 3:
+        return x - x ** 3 / (3 * 2 * 1)
+    else:
+        raise NotImplementedError(
+            "Can't create Taylor series of order={0}".format(
+                order))
